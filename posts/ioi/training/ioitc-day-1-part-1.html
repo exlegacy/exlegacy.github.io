@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>IOI Training Camp Day - 1 Part - 1 : VCode</title>
+        <link rel="icon" type="image/x-icon" href="https://exlegacy.github.io/assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="https://exlegacy.github.io/css/styles.css" rel="stylesheet" />
+
+        <!-- Mathjax -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+        <!-- Google Ads -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8233035876167231" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="https://exlegacy.github.io">VCODE</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="https://exlegacy.github.io">Home</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="https://exlegacy.github.io/about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="https://exlegacy.github.io/dsa/index.html">DSA</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link px-lg-3 py-3 py-lg-4 dropdown-toggle" href="https://exlegacy.github.io/posts/ioi/index.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            IOI
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="https://exlegacy.github.io/posts/ioi/zonal">Zonal</a></li>
+                                <li><a class="dropdown-item" href="https://exlegacy.github.io/posts/ioi/national">National</a></li>
+                                <li><a class="dropdown-item" href="https://exlegacy.github.io/posts/ioi/training">Training</a></li>
+                                <li><a class="dropdown-item" href="https://exlegacy.github.io/posts/ioi/international">International</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="https://exlegacy.github.io/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('https://exlegacy.github.io/assets/img/post-bg.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="post-heading">
+                            <h1>IOITC DAY-1 PART-1</h1>
+                            <span class="meta">
+                                Posted on Jan 23, 2022
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Post Content-->
+        <article class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+						<p>
+							Let us start with a problem
+						</p>
+
+						<br/>
+
+						<h2 class="text-danger">
+							Problem
+						</h2>
+
+						<br/>
+
+						<p style="text-align: justify;">
+							Given a list of integers <b>L = [A<sub>1</sub>, A<sub>2</sub>, A<sub>3</sub>, …, A<sub>N</sub>]</b>. Where <b>A<sub>i</sub> ≥ 0</b>, <b>0 ≤ i ≤ N</b>. You have to find the shortest contiguous segment in the list which adds up to a given integer <b>K</b>. If there are more than one such segments, print one of them.
+							<br/><br/>
+							For example, 
+							If  <b>L = [2, 1, 3, 1, 4, 4, 1, 8, 1, 7]</b> and <b>K = 9</b>, The answer would be <b>{6, 7}</b>.
+						</p>
+
+						<br/>
+
+						<h2 class="text-danger">
+							By Naive Approach
+						</h2>
+
+						<br/>
+
+						<p style="text-align: justify;">
+							Find every possible segments and sum up elements present in it. This will have \(\cal{O}(n^2)\) time complexity.
+						</p>
+
+						<br/>
+							
+						<script src="https://gist.github.com/exlegacy/915cff6f2bd368c7ca37b305c37bde37.js"></script>
+
+						<br/>
+
+						<p style="text-align: justify;">
+							Can we do better ?
+						</p>
+
+						<br/>
+
+						<h2 class="text-danger">
+							By Prefix Sum
+						</h2>
+
+						<br/>
+
+						<p style="text-align: justify;">
+							Compute the prefix sum of array <b>L</b> into another array <b>prefixL</b> (make sure to add an extra element "0" before the list) , for every index <b>i</b> in <b>prefixL</b>, search if an element exist with value <b>prefixL[i] + K</b> and return the indices of the segment with minimum length. We can search for element with help of Binary Search, which will take \(\cal{O}(\log(n))\) time. So, overall it will have \(\cal{O}(n \cdot \log(n))\) time complexity. 
+						</p>
+
+						<br/>
+
+						<script src="https://gist.github.com/exlegacy/424ad7bc4c5b1816e6b9365e94f29389.js"></script>
+
+						<br/>
+
+						<p style="text-align: justify;">
+							Can we still do better ?
+						</p>
+
+						<br/>
+
+						<h2 class="text-danger">
+							By Sliding Window Algorithm
+						</h2>
+
+						<br/>
+
+						<p style="text-align: justify;">
+							As the name suggest, we will use two vectors <b>i</b> and <b>j</b> to point at starting and ending element of the segment respectively. If the current sum of the segment is less than <b>K</b> then increase the index <b>j</b> and include the element in the sum. If the current sum of the segment is greater than K then increase the index <b>i</b> and exclude the from the sum. When the current segment sum is equal to <b>K</b>, store the indices if the segment length is less than the previous one. As the array is iterated once, So, time complexity will be \(\cal{O}(n)\). 
+						</p>
+
+						<br/>
+
+						<script src="https://gist.github.com/exlegacy/8da5b15542c00028be9d868de4a4dfe9.js"></script>
+
+						<br/>
+
+						<p style="text-align: justify;">
+							<b>Note:</b> Some conditions have been added to ensure that <b>i ≤ j</b> and <b>j < n</b>.
+						</p>
+
+						<br/>
+
+						<p style="text-align: justify;">
+							What if the numbers can also be negative?
+						</p>
+
+						<br/>
+
+						<div style="width: 100%; display: inline-block;">
+							<div style="float: left;"><a href=""></a></div>
+							<div style="float: right;"><a href="https://exlegacy.github.io/posts/ioi/training/ioitc-day-1-part-2.html">Next ></a></div>
+						</div>
+
+						<br/>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- Footer-->
+        <footer class="border-top">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <ul class="list-inline text-center">
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="small text-center text-muted fst-italic">Copyright &copy; VCode 2022</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="https://exlegacy.github.io/js/scripts.js"></script>
+    </body>
+</html>
